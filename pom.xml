@@ -59,6 +59,7 @@
 
     <properties>
         <otp.serialization.version.id>201</otp.serialization.version.id>
+        <sonar.organization>eduardo37830</sonar.organization>
 
         <!-- Lib versions - keep list sorted on property name -->
         <geotools.version>33.2</geotools.version>
