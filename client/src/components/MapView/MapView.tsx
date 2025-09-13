@@ -18,6 +18,7 @@ import { ContextMenuPopup } from './ContextMenuPopup.tsx';
 import { GeometryPropertyPopup } from './GeometryPropertyPopup.tsx';
 import RightMenu from './RightMenu.tsx';
 import { findSelectedDebugLayers } from '../../util/map.ts';
+import { RouteCoverageLayer } from './RouteCoverageLayer.tsx';
 
 const styleUrl = import.meta.env.VITE_DEBUG_STYLE_URL;
 
@@ -122,6 +123,11 @@ export function MapView({
         {tripQueryResult?.trip.tripPatterns.length && (
           <LegLines tripPattern={tripQueryResult.trip.tripPatterns[selectedTripPatternIndex] as TripPattern} />
         )}
+
+        <RouteCoverageLayer
+          tripQueryVariables={tripQueryVariables}
+        />
+
         {showContextPopup && (
           <ContextMenuPopup
             tripQueryVariables={tripQueryVariables}
